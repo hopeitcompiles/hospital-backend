@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      enabled: true
+      # Threshold after which files are written to disk.
+      file-size-threshold: 2KB
+      # Max file size.
+      max-file-size: 50MB
+      # Max Request Size
+      max-request-size: 215MB
+application:
+  jwt:
+    secretKey: 4oqo557OV5B74Z2FjQ03WISO8PIXaEsIiQJ0wMPNxLaXYH8epxtaL6bTdcCyGRzryMGAdiXTHZAkYfNr0UlM7zmfDZ67mZa9IntIXesmoJECNq6CExHOL3eBL1D75aKFfI66y3wgYetnVtCWMQAfpSAAbsTKypaJQJc2O0j1JO5gTyEFFuoepZv4vC6Z5ijdrnCLSdENOBFmtWSV6k0AHpkSGHquGYmNzIXHbNId0umaSSYyGYYzaPZ5YUz9fFYTGoTKGw4jDqenQMN22cqTrzW1Eygp4jwwgzJsVVTuRO6iKPV8I330fL3VeBp35VsPMQkQC61I3DO7VUHrFGSSEJlBAzAQKLFXUrexA6yPP6fFcftOyvCfsj2NfaCDScwu9ZnKjFw2JMJB8zK7whdzvPhFVaLPSlxxHgtsLB3exP6Cp7w3ugw4uyACtNgDFF6FoSzh47LkWHSc8RfCnbRBsZCGwRK3Ul5mq8mKGFQSDOZuXOtEJ0R3PYwEWe0FHKgDPJKgKOza32SxxEaf2y4dgei4PDoAmhXqF3OeQYPLJReAD8No7TCW7wB4CAlrtR95kQKJUdrnbFFFSZ8oQZ39GhCmHSGzIRxvN1W5v4nFezwj9qCJSh63FukuRLD70cpK3Q6aPdo3jn6yAp78ALjpn0ZTCNiMNkpBCRMtUQGP1eOlTZolvHY1ywi0nuhU8MlrB968DmmLIHbnazpXFhM5IdO8rqpKB4yCMszRtrxVaTNS7UP8SiYdWM2PbOy55l3YrzUvbuYada8zubEtNXmItBx0JLLd5ZEHlnhxQPn1Sgu4XkXAXhMVAK7g0eEnM0tb0wluw8UE9bcyva7DuVVLZfNMGeQEMwfNEIkgKrmBjR5f9XrbvTalu5ujIAHeHAs7eORSwuR6c5d0JNnTbz25TjWBIQbHjeAi1floDv3O7zPIkO376VGl3G5NQixhDRzTKmOD0dCsfQABj2WrSuRoEsQfDhb5LqjDIKjLgESd
+    tokenPrefix: Bearer
+    tokenExpirationAfterDays: 7
