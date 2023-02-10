@@ -22,7 +22,6 @@ public class AppointmentController {
     public ResponseEntity<Page<Appointment>> fetchAppointmentsPaginated(@RequestParam(defaultValue = "1") int page,
                                                                           @RequestParam(defaultValue = "20") int size, @RequestParam(defaultValue = "") String search) {
         try {
-            System.out.println("searching:"+search);
             page=page>0?page-1:0;
             Pageable paging = PageRequest.of(page, size);
             Page<Appointment> pages;
@@ -58,8 +57,8 @@ public class AppointmentController {
     @PreAuthorize("hasAuthority('appointment:delete')")
     public ResponseEntity<String> deleteAppointment(@PathVariable(name = "id") String id) {
         try {
-            Long delete_id=Long.parseLong(id);
-            appointmentService.delete(delete_id);
+            Long deleteId=Long.parseLong(id);
+            appointmentService.delete(deleteId);
             return new ResponseEntity<>("Deleted", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -68,8 +67,8 @@ public class AppointmentController {
     @GetMapping("/{id}")
     public ResponseEntity<Appointment> getSchedule(@PathVariable(name = "id") String id) {
         try {
-            Long element_id=Long.parseLong(id);
-            Appointment element=appointmentService.findById(element_id);
+            Long elementId=Long.parseLong(id);
+            Appointment element=appointmentService.findById(elementId);
             return new ResponseEntity<>(element, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

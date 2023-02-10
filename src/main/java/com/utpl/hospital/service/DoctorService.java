@@ -1,21 +1,14 @@
 package com.utpl.hospital.service;
 
-import com.utpl.hospital.authentication.ApplicationRole;
 import com.utpl.hospital.model.Doctor;
-import com.utpl.hospital.model.Person;
-import com.utpl.hospital.model.Role;
-import com.utpl.hospital.model.User;
 import com.utpl.hospital.repository.IDoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Optional;
-
 
 @Service
 public class DoctorService extends GenericService<Doctor, Long> {
@@ -26,7 +19,6 @@ public class DoctorService extends GenericService<Doctor, Long> {
 
 
 	public CrudRepository<Doctor, Long> getDao() {
-		// TODO Auto-generated method stub
 		return repository;
 	}
 

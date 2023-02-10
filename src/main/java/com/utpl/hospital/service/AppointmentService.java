@@ -16,7 +16,6 @@ public class AppointmentService extends GenericService<Appointment, Long> {
 
 
 	public CrudRepository<Appointment, Long> getDao() {
-		// TODO Auto-generated method stub
 		return repository;
 	}
 

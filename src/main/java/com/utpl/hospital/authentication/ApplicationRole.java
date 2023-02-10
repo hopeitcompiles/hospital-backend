@@ -40,10 +40,14 @@ public enum ApplicationRole {
 		this.level=level;
 	}
 	public static Set<ApplicationPermission> combine_set(Set<ApplicationPermission> a,Set<ApplicationPermission> b){
-		return new HashSet<ApplicationPermission>(){{
-			addAll(a);
-			addAll(b);
-		}};
+		Set<ApplicationPermission> sets=new HashSet<>();
+		for (ApplicationPermission permission:a) {
+			sets.add(permission);
+		}
+		for (ApplicationPermission permission:b) {
+			sets.add(permission);
+		}
+		return sets;
 	}
 	public Set<ApplicationPermission> getPermissions() {
 		return permissions;

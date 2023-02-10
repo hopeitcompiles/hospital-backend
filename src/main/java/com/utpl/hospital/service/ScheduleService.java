@@ -1,6 +1,5 @@
 package com.utpl.hospital.service;
 
-import com.utpl.hospital.model.Appointment;
 import com.utpl.hospital.model.Schedule;
 import com.utpl.hospital.repository.IScheduleRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,5 @@
 package com.utpl.hospital.service;
 
-import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.utpl.hospital.model.User;
 import com.utpl.hospital.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-
 
 @Service
 public class UserService extends GenericService<User, Long> {

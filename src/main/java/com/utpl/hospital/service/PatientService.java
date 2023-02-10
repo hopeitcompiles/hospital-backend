@@ -1,18 +1,12 @@
 package com.utpl.hospital.service;
 
-import com.utpl.hospital.model.Doctor;
 import com.utpl.hospital.model.Patient;
-import com.utpl.hospital.repository.IDoctorRepository;
 import com.utpl.hospital.repository.IPatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.util.Optional;
 
 
 @Service
