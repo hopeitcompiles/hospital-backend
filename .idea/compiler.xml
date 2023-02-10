@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Hospital - Copy" />
+        <module name="hospital-backend" />
         <module name="Hospital" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Hospital" options="-parameters" />
       <module name="Hospital - Copy" options="-parameters" />
+      <module name="hospital-backend" options="-parameters" />
     </option>
   </component>
 </project>
