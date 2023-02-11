@@ -14,8 +14,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashSet;
+import java.util.List;
 
 @SpringBootApplication
 public class HospitalApplication {
@@ -26,7 +27,8 @@ public class HospitalApplication {
 	@Bean
 	CommandLineRunner init(UserService userService, SpecializationService specializationService, RoleService roleService, IDoctorRepository doctorService) {
 		return args -> {
-			if(false){
+			List<Role> roles=roleService.getAll();
+			if(roles.isEmpty()){
 				Role admin=new Role();
 				admin.setId(1L);
 				admin.setRole(ApplicationRole.ADMIN);
@@ -37,7 +39,7 @@ public class HospitalApplication {
 				patient.setName("Paciente");
 				patient.setId(2L);
 				patient.setRole(ApplicationRole.PATIENT);
-				patient=roleService.save(patient);
+				roleService.save(patient);
 				admin.setColor(Color.GREEN.toString());
 				User user=new User() ;
 				user.setId(1L);
