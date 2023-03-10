@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Objects;
 
@@ -36,4 +37,11 @@ public class Person implements Serializable {
     private User user;
     private boolean active;
     private boolean enabled;
+    public int getAge(){
+        if(birthdate!=null){
+            Period edad = Period.between(birthdate, LocalDate.now());
+            return edad.getYears();
+        }
+        return 0;
+    }
 }

@@ -3,6 +3,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
+#    url: jdbc:mysql://awseb-e-wppf3pxhej-stack-awsebrdsdatabase-knga7xtqggqr.cpa5x5ytr9x1.us-east-1.rds.amazonaws.com:3306/default
     url: jdbc:mysql://localhost:3306/hospital
     username: root
     password:
